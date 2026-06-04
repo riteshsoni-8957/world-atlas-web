@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import footerData from '../../api/footerApi.json';
 
 function Footers () {
@@ -32,10 +33,18 @@ function Footers () {
 
               <div className="footerMenu flex">
                 <ul className="footerMenuList flex">
-                  <li><a href="/">Home</a></li>
-                  <li><a href="/about">About</a></li>
-                  <li><a href="/country">Country</a></li>
-                  <li><a href="/contact">Contact</a></li>
+                  <li><a>
+                    <NavLink to='/'> Home </NavLink> 
+                  </a></li>
+                  <li><a>
+                    <NavLink to='/about'> About </NavLink>
+                  </a></li>
+                  <li><a>
+                    <NavLink to='/country'> Country </NavLink>
+                  </a></li>
+                  <li><a>
+                    <NavLink to='/contact'> Contact </NavLink>
+                  </a></li>
                 </ul>
               </div>
             </div>
