@@ -1,5 +1,5 @@
 import './App.css';
-import {createBrowserRouter, RouterProvider} from 'react-router-dom'
+import {createHashRouter, RouterProvider} from 'react-router-dom'
 
 
 import AppLayout from './components/Layout/AppLayout';
@@ -9,7 +9,7 @@ import Country from './pages/Country';
 import Contact from './pages/Contact';
 
 
-const router = createBrowserRouter(
+const router = createHashRouter(
   [
     {
       path: "/",
@@ -35,9 +35,9 @@ const router = createBrowserRouter(
     },
   ], 
   
-  {
-    basename: "/world-atlas-web",
-  }
+  // {
+  //   basename: "/world-atlas-web",
+  // }
 )
 
 
