@@ -11,4 +11,6 @@ export default defineConfig({
     
     // tailwindcss(),
   ],
+
+  base: '/world-atlas-web/'
 })
