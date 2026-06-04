@@ -9,30 +9,36 @@ import Country from './pages/Country';
 import Contact from './pages/Contact';
 
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <AppLayout />,
+      children: [
+        {
+          path: '/',
+          element: <Home />
+        },
+        {
+          path: 'About',
+          element: <About />
+        },
+        {
+          path: 'Country',
+          element: <Country />
+        },
+        {
+          path: 'Contact',
+          element: <Contact />
+        }
+      ]
+    },
+  ], 
+  
   {
-    path: "/",
-    element: <AppLayout />,
-    children: [
-      {
-        path: '/',
-        element: <Home />
-      },
-      {
-        path: 'About',
-        element: <About />
-      },
-      {
-        path: 'Country',
-        element: <Country />
-      },
-      {
-        path: 'Contact',
-        element: <Contact />
-      }
-    ]
+    basename: "/world-atlas-web",
   }
-])
+)
 
 
 
