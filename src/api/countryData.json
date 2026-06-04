@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "countryName": "India",
+    "capital": "New Delhi",
+    "population": 1438069596,
+    "interestingFact": "India is the world's largest democracy."
+  },
+  {
+    "id": 2,
+    "countryName": "Japan",
+    "capital": "Tokyo",
+    "population": 123294513,
+    "interestingFact": "Japan consists of more than 14,000 islands."
+  },
+  {
+    "id": 3,
+    "countryName": "Brazil",
+    "capital": "Brasilia",
+    "population": 211998573,
+    "interestingFact": "The Amazon Rainforest covers much of Brazil."
+  },
+  {
+    "id": 4,
+    "countryName": "Canada",
+    "capital": "Ottawa",
+    "population": 40126723,
+    "interestingFact": "Canada has the longest coastline in the world."
+  },
+  {
+    "id": 5,
+    "countryName": "Australia",
+    "capital": "Canberra",
+    "population": 26970000,
+    "interestingFact": "Australia is the only country that is also a continent."
+  },
+  {
+    "id": 6,
+    "countryName": "Germany",
+    "capital": "Berlin",
+    "population": 84552242,
+    "interestingFact": "Germany is known for its engineering and automobile industry."
+  },
+  {
+    "id": 7,
+    "countryName": "France",
+    "capital": "Paris",
+    "population": 68373433,
+    "interestingFact": "The Eiffel Tower is one of the most visited landmarks in the world."
+  },
+  {
+    "id": 8,
+    "countryName": "South Africa",
+    "capital": "Pretoria",
+    "population": 63212384,
+    "interestingFact": "South Africa has three capital cities."
+  }
+]

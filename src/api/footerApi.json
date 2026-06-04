@@ -1,0 +1,20 @@
+[
+    {
+        "icon": "📍",
+        "title": "Address",
+        "details": "123 Street, City, Country",
+        "index": 1
+    },
+    {
+        "icon": "📞",
+        "title": "Phone",
+        "details": "+123 456 7890",
+        "index": 2
+    },
+    {
+        "icon": "✉️",
+        "title": "Email",
+        "details": "info@example.com",
+        "index": 3
+    }
+]
