@@ -188,6 +188,7 @@ header{
                     background: linear-gradient(71deg, #080509, #1e1c21, #080509);
                     align-items: center;
                     transition: 0.3s ease-in-out;
+                    z-index: 1000;
 
                     ul{
                         flex-direction: column;

@@ -2,6 +2,8 @@ import { NavLink } from 'react-router-dom';
 import footerData from '../../api/footerApi.json';
 
 function Footers () {
+
+  
   return (
     <>
       <footer>
