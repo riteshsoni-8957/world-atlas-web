@@ -35,18 +35,18 @@ function Footers () {
 
               <div className="footerMenu flex">
                 <ul className="footerMenuList flex">
-                  <li><a>
+                  <li>
                     <NavLink to='/'> Home </NavLink> 
-                  </a></li>
-                  <li><a>
+                  </li>
+                  <li>
                     <NavLink to='/about'> About </NavLink>
-                  </a></li>
-                  <li><a>
+                  </li>
+                  <li>
                     <NavLink to='/country'> Country </NavLink>
-                  </a></li>
-                  <li><a>
+                  </li>
+                  <li>
                     <NavLink to='/contact'> Contact </NavLink>
-                  </a></li>
+                  </li>
                 </ul>
               </div>
             </div>

@@ -1,4 +1,4 @@
-import countryData from '../api/countryData.json';
+import aboutData from '../api/aboutData.json';
 
 function About () {
     return (
@@ -13,7 +13,7 @@ function About () {
 
                     <div className="container-cards grid grid-three-cols">
                         {
-                            countryData.map(({id, countryName, capital, population, interestingFact}) => {
+                            aboutData.map(({id, countryName, capital, population, interestingFact}) => {
                                 return (
                                     <div className="card" key={id}>
                                         <h3 className='card-title'>{countryName}</h3>
