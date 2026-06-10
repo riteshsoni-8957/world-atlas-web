@@ -1,6 +1,7 @@
 import { useEffect, useState, useTransition } from "react";
 import { getCountryData } from "../api/postApi";
 import { NavLink } from "react-router-dom";
+import Loader from '../pages/loader'
 
 // import icons
 import { FaAngleDown } from "react-icons/fa";
@@ -16,6 +17,7 @@ function Country() {
         startTransition(async () => {
             const res = await getCountryData();
             setCountries(res.data);
+            
             console.log(res);
             console.log(res.data);
         });
@@ -27,7 +29,7 @@ function Country() {
     }
 
     // return loader page
-    if(isPending) return <h1>Loading....</h1>
+    if(isPending) return <Loader/>
 
     // return country Section jsx
     return (
@@ -49,7 +51,7 @@ function Country() {
                                     </div>
 
                                     <div className="card-info">
-                                        <h3 className="cardTitle">{name.common}</h3>
+                                        <h3 className="cardTitle">{name.common.length > 10 ? name.common.slice(0, 10) + "..." : name.common}</h3>
 
                                         <p>
                                             Capital: 
@@ -62,7 +64,7 @@ function Country() {
                                         </p>
 
                                         <button className="btn">
-                                            <NavLink to={""}>
+                                            <NavLink to={`/country/${name.common}`}>
                                                 Read More
                                             </NavLink>
                                         </button>

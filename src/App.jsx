@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Country from './pages/Country';
 import Contact from './pages/Contact';
+import CountryDetails from './pages/CountryDetails';
 
 
 const router = createHashRouter(
@@ -26,6 +27,10 @@ const router = createHashRouter(
         {
           path: 'Country',
           element: <Country />
+        },
+        {
+          path: 'Country/:id',
+          element: <CountryDetails />
         },
         {
           path: 'Contact',
