@@ -32,7 +32,7 @@ function CountryDetails() {
       <div className="container flex">
         <div className="grid grid-two-cols">
           <div className="country-image">
-            <img src={country.flags.png} alt="country.flags.alt" />
+            <img src={country.flags.png} alt={country.flags.alt} />
           </div>
 
           <div className="country-details">
