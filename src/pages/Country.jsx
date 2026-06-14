@@ -17,7 +17,7 @@ function Country() {
     // set data in countries
     useEffect(() => {
         startTransition(() => {
-           setCountries(data)
+            setCountries(data)
             console.log(data); 
         })
     }, []);
@@ -42,12 +42,12 @@ function Country() {
                 <div className="cards-container grid grid-four-cols">
                     {
                         countries.slice(0, limit).map((country, index) => {
-                            const {name, flags, capital, population, region} = country;
+                            const {name, flag, capital, population, region} = country;
 
                             return (
                                 <div className="country-card" key={index}>
                                     <div className="image-div">
-                                        <img src= {flags.svg} alt= {flags.alt} />
+                                        <img src= {flag} alt="" />
                                     </div>
 
                                     <div className="card-info">
@@ -68,11 +68,11 @@ function Country() {
                                             <small>{population}</small>
                                         </p>
 
-                                        <button className="btn">
-                                            <NavLink to={`/country/${name.common}`}>
+                                        <NavLink to={`/country/${name.common}`}>
+                                            <button className="btn">
                                                 Read More
-                                            </NavLink>
-                                        </button>
+                                            </button>
+                                        </NavLink>
                                     </div>
                                 </div>
                             )
