@@ -1,13 +1,14 @@
 import { useEffect, useState, useTransition } from "react";
 import { NavLink, useParams } from "react-router-dom";
 import Loader from "./loader";
-import { getCountryIndData } from "../api/postApi";
+// import { getCountryIndData } from "../api/postApi";
+
+import data from '../api/countryData.json'
 
 function CountryDetails() {
   const params = useParams();
 
   console.log(params);
-
 
   const [isPending, startTransition] = useTransition();
   const [country, setCountry] = useState();
@@ -15,12 +16,12 @@ function CountryDetails() {
     // get the Data
     useEffect(() => {
         startTransition(async () => {
-            const res = await getCountryIndData(params.id);
-            // console.log(res);
-            console.log(res.data[0]);
+          const countryData = data.find(
+            (item) => item.name.common === params.id
+          );
 
-            setCountry(res.data[0])
-            // console.log(country)
+          setCountry(countryData);
+          console.log(countryData);
         });
     }, [params.id]);
 
@@ -38,7 +39,7 @@ function CountryDetails() {
           <div className="country-details">
             <h1 className="country-title">{country.name.official}</h1>
 
-            <p>Native Name: 
+            {/* <p>Native Name: 
               <span>
                 {
                   Object.keys(country.name.nativeName)
@@ -46,15 +47,15 @@ function CountryDetails() {
                   .join(", ")
                 }
               </span>
-            </p>
+            </p> */}
 
             <p>Population: <span>{country.population}</span> </p>
             <p>Region: <span>{country.region}</span> </p>
-            <p>Sub Region: <span>{country.subregion}</span> </p>
+            {/* <p>Sub Region: <span>{country.subregion}</span> </p> */}
             <p>Capital: <span>{country.capital}</span> </p>
-            <p>Top Level Domian: <span>{country.tld[0]}</span> </p>
+            {/* <p>Top Level Domian: <span>{country.tld[0]}</span> </p> */}
 
-            <p>Currencies: 
+            {/* <p>Currencies: 
               <span>
                 {
                   Object.keys(country.currencies)
@@ -62,9 +63,9 @@ function CountryDetails() {
                   .join(", ")
                 }
               </span> 
-            </p>
+            </p> */}
 
-            <p>Languages: 
+            {/* <p>Languages: 
               <span>
                 {
                   Object.keys(country.languages)
@@ -72,7 +73,7 @@ function CountryDetails() {
                   .join(", ")
                 }
               </span>
-            </p>
+            </p> */}
           </div>
         </div>
 

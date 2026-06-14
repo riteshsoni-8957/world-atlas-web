@@ -1,7 +1,9 @@
 import { useEffect, useState, useTransition } from "react";
-import { getCountryData } from "../api/postApi";
 import { NavLink } from "react-router-dom";
 import Loader from '../pages/loader'
+
+// import data
+import data from '../api/countryData.json';
 
 // import icons
 import { FaAngleDown } from "react-icons/fa";
@@ -12,16 +14,14 @@ function Country() {
     const [countries, setCountries] = useState([]);
     const [limit, setLimit] = useState(20);
 
-    // get the Data
+    // set data in countries
     useEffect(() => {
-        startTransition(async () => {
-            const res = await getCountryData();
-            setCountries(res.data);
-            
-            console.log(res);
-            console.log(res.data);
-        });
+        startTransition(() => {
+           setCountries(data)
+            console.log(data); 
+        })
     }, []);
+    
 
     // set the country limit
     function showMore() {
@@ -42,7 +42,7 @@ function Country() {
                 <div className="cards-container grid grid-four-cols">
                     {
                         countries.slice(0, limit).map((country, index) => {
-                            const {name, flags, capital, population} = country;
+                            const {name, flags, capital, population, region} = country;
 
                             return (
                                 <div className="country-card" key={index}>
@@ -56,6 +56,11 @@ function Country() {
                                         <p>
                                             Capital: 
                                             <small>{capital[0]}</small>
+                                        </p>
+
+                                        <p>
+                                            Region:
+                                            <small>{region}</small>
                                         </p>
 
                                         <p>
