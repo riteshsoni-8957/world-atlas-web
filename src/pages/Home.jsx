@@ -1,6 +1,7 @@
 // imports icons 
 import { FaLongArrowAltRight } from "react-icons/fa";
 import About from './About';
+import { NavLink } from "react-router-dom";
 
 
 function Home () {
@@ -17,10 +18,13 @@ function Home () {
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus nisi, corporis consequatur numquam optio dolorum!
                         </p>
 
-                        <button className="btn">
-                            Explore Now
-                            <FaLongArrowAltRight />
-                        </button>
+                        <NavLink to="/Country">  
+                            <button className="btn">
+                                Explore Now
+                                <FaLongArrowAltRight />
+                            </button>
+                        </NavLink>
+                        
                     </div>
 
                     <div className="home-img">
