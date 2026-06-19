@@ -27,7 +27,12 @@ function Country() {
 
     // set the country limit
     function showMore() {
-        setLimit(limit+20);
+        if(limit >= filteredCountry.length) {
+            setLimit(20);
+        }
+        else{
+            setLimit(limit+20);
+        }
     }
 
     // create handle input change
@@ -169,7 +174,7 @@ function Country() {
 
                 <div className="show-more-btn">
                     <button className="btn" onClick={showMore}>
-                        show More
+                        {limit >= filteredCountry.length ? "Less" : "Show More"}
                         <FaAngleDown />
                     </button>
                 </div>
